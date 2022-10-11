@@ -11,11 +11,11 @@
   <meta charset="utf-8">
 
   
-  <title>Hello World</title>
+  <title>RSA私钥格式解析</title>
   
-  <link rel="canonical" href="http://example.com/2022/10/09/hello-world/">
+  <link rel="canonical" href="http://example.com/2022/10/11/RSA%E7%A7%81%E9%92%A5%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  <meta name="description" content="python 生成私钥1from Crypto.PublicKey import RSA 读取公钥信息    1 2 3 4 5 6 rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e pr">
   
   
   <meta name="author" content="John Doe">
@@ -24,21 +24,21 @@
   
   <meta property="og:site_name" content="Hexo" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Hello World" />
+  <meta property="og:title" content="RSA私钥格式解析" />
   
-  <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  <meta property="og:description" content="python 生成私钥1from Crypto.PublicKey import RSA 读取公钥信息    1 2 3 4 5 6 rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e pr">
   
-  <meta property="og:url" content="http://example.com/2022/10/09/hello-world/" />
+  <meta property="og:url" content="http://example.com/2022/10/11/RSA%E7%A7%81%E9%92%A5%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Hello World">
+  <meta name="twitter:title" content="RSA私钥格式解析">
   
-  <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
-  
-  
+  <meta name="twitter:description" content="python 生成私钥1from Crypto.PublicKey import RSA 读取公钥信息    1 2 3 4 5 6 rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e pr">
   
   
-  <meta name="twitter:url" content="http://example.com/2022/10/09/hello-world/" />
+  
+  
+  <meta name="twitter:url" content="http://example.com/2022/10/11/RSA%E7%A7%81%E9%92%A5%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -130,7 +130,119 @@
 
   
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 <body>
   <div class="container">
@@ -195,19 +307,111 @@
 </div>
 
         <div class="trans">
-            <h2>Hello World</h2>
+            <h2>RSA私钥格式解析</h2>
 
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+  <h2 id="python-生成私钥"><a href="#python-生成私钥" class="headerlink" title="python 生成私钥"></a>python 生成私钥</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br></pre></td></tr></table></figure>
+<h2 id="读取公钥信息"><a href="#读取公钥信息" class="headerlink" title="读取公钥信息"></a>读取公钥信息</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th><code>1 2 3 4 5 6</code></th>
+<th><code>rsakey = RSA.importKey(open("public.key", "r").read()) n = rsakey.n e = rsakey.e print("n=%\ne=%d",n,e)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="生成秘钥对文件"><a href="#生成秘钥对文件" class="headerlink" title="生成秘钥对文件"></a>生成秘钥对文件</h2><h2 id="对文件加解密"><a href="#对文件加解密" class="headerlink" title="对文件加解密"></a>对文件加解密</h2><p>载入编码方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from Crypto.Cipher import PKCS1_OAEP</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><code>1 2 3 4 5 6 7</code></th>
+<th><code>rsakey=RSA.importKey(open("public_key.key","r").read()) rsa = PKCS1_OAEP.new(rsakey) encrypt = rsa.encrypt(flag.encode()) rsakey=RSA.importKey(open("private_key.key","r").read()) rsa = PKCS1_OAEP.new(rsakey) decrypt = rsa.decrypt(f.read())</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="算得-n-e-d-q-p-生成-private-key-key"><a href="#算得-n-e-d-q-p-生成-private-key-key" class="headerlink" title="算得 n e d q p 生成 private_key.key"></a>算得 n e d q p 生成 private_key.key</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th><code>1 2 3 4 5 6 7</code></th>
+<th><code>rsa_components = (n, e, int(d), p, q) rsa = RSA.construct(rsa_components) public_key = rsa.exportKey() # 此rsa与上文随机生成的rsa相同 f = open("public_key.key", "w") f.write(public_key.decode()) f.close()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>在开始之前，让我们先了解一些关键概念。</p>
+<p>X.509 是定义公钥证书格式的标准。 因此，这种格式描述了其他信息中的公钥。</p>
+<p>DER是最流行的编码格式，用于在文件中存储 X.509 证书、PKCS8 私钥等数据。这是一种二进制编码，无法使用文本编辑器查看生成的内容。</p>
+<p>PKCS8是用于存储私钥信息的标准语法。可以选择使用对称算法对私钥进行加密。</p>
+<p>该标准不仅可以处理 RSA 私钥，还可以处理其他算法。PKCS8 私钥通常通过 PEM 编码格式进行交换。</p>
+<p>PEM是 DER 证书的 base-64 编码机制。PEM 还可以对其他类型的数据进行编码，例如公钥/私钥和证书请求。</p>
+<p>PEM 文件还包含描述编码数据类型的页眉和页脚，举例如下：</p>
+<p>`——-BEGIN RSA PRIVATE KEY——-</p>
+<p>…Base64 encoding of the DER encoded certificate…</p>
+<p>——-END RSA PRIVATE KEY——-`</p>
+<p>3：解析PEM证书</p>
+<p>1：示例证书：</p>
+<p>`——-BEGIN RSA PRIVATE KEY——-</p>
+<p>MIICXAIBAAKBgQDnsN1F66mF6h6y/XpyN+ZU/w5AyeWBjZNIqi33/ATn4qQpw+kD</p>
+<p>HrKyF7sQ/RNw6tibM90iM6VOA14305umPbPROJJs3JoB6Lao74SUm58aO9T+Ct7r</p>
+<p>O52E+3r5jyDQicdRl6lIhLigNADXPD/KoNwfrRrCyw4wTHMZhSHc8eUHeQIDAQAB</p>
+<p>AoGABVTIgqddiztL4Yp7ms02e5Yy2cLLiSOc0/s2e5JM+pj4dg2P+wZlzjtFjqqE</p>
+<p>HAELYubam8LcduMU8+vmlPiufoK9fo47fLsX1PFCY9TDKL1dFlZgBAmJU7hR27h/</p>
+<p>gCo4r3PMub/snq7n+skrbarZbX1J6Q1o5UYKFIrrIjNObEECQQD0DIzIdMObPUUu</p>
+<p>W+JXg10kz/ayYn3irxZmp5ngc+b9WZfSOPehZBsLWsIb1eC7y9DZMhZfBQ/sPaO8</p>
+<p>0tvqJMUFAkEA8wlj3B3zK20pK+Hj+vFiAlaQmqILTSfv/9jMm8tbVfXt+bHrmZdN</p>
+<p>jruGVQDb7V2pW9HeG5PgDB3vKXeOiVfC5QJAYikKFzaf1rj2ModSqtBzjnL3Txi+</p>
+<p>eYbjA7c19UmpBw4aOrwfHhMdrZt7p6aHFgIMps+2n9Fxbhv8194YBj1z4QJAPONW</p>
+<p>XFg4iuGvVeoi9sSwvEs5sTP1xt/BlgSXxlRdTpztgQgdMX6hlKfQkM1FTCOSAYoD</p>
+<p>rj8O+5ooR+hHEoulLQJBAOtaMvMWIOG7mARngpwqfJ07L41/T0ITHteiiYJfCurz</p>
+<p>kLVCx1XA3MlN+u5gn7osUHMbah0Ze3uakSZ6za3mL5Y=</p>
+<p>——-END RSA PRIVATE KEY——-`</p>
+<p>解析：</p>
+<p>1）删除页眉、页脚和新行。</p>
+<p>2）将 Base64 编码的字符串解码为其对应的二进制格式。</p>
+<p>解析之后的16进制数据：</p>
+<p><code>3082025C02010002818100E7B0DD45EBA985EA1EB2FD7A7237E654FF0E40C9E5818D9348AA2DF7FC04E7E2A429C3E9031EB2B217BB10FD1370EAD89B33DD2233A54E035E37D39BA63DB3D138926CDC9A01E8B6A8EF84949B9F1A3BD4FE0ADEEB3B9D84FB7AF98F20D089C75197A94884B8A03400D73C3FCAA0DC1FAD1AC2CB0E304C73198521DCF1E5077902030100010281800554C882A75D8B3B4BE18A7B9ACD367B9632D9C2CB89239CD3FB367B924CFA98F8760D8FFB0665CE3B458EAA841C010B62E6DA9BC2DC76E314F3EBE694F8AE7E82BD7E8E3B7CBB17D4F14263D4C328BD5D16566004098953B851DBB87F802A38AF73CCB9BFEC9EAEE7FAC92B6DAAD96D7D49E90D68E5460A148AEB22334E6C41024100F40C8CC874C39B3D452E5BE257835D24CFF6B2627DE2AF1666A799E073E6FD5997D238F7A1641B0B5AC21BD5E0BBCBD0D932165F050FEC3DA3BCD2DBEA24C505024100F30963DC1DF32B6D292BE1E3FAF1620256909AA20B4D27EFFFD8CC9BCB5B55F5EDF9B1EB99974D8EBB865500DBED5DA95BD1DE1B93E00C1DEF29778E8957C2E5024062290A17369FD6B8F6328752AAD0738E72F74F18BE7986E303B735F549A9070E1A3ABC1F1E131DAD9B7BA7A68716020CA6CFB69FD1716E1BFCD7DE18063D73E102403CE3565C58388AE1AF55EA22F6C4B0BC4B39B133F5C6DFC1960497C6545D4E9CED81081D317EA194A7D090CD454C2392018A03AE3F0EFB9A2847E847128BA52D024100EB5A32F31620E1BB980467829C2A7C9D3B2F8D7F4F42131ED7A289825F0AEAF390B542C755C0DCC94DFAEE609FBA2C50731B6A1D197B7B9A91267ACDADE62F96</code></p>
+<p><strong>解析数据：</strong></p>
+<p><code>3082025C#</code> 标签头，类型为SEQUENCE (sequence 序列)，此标签头共 4 字节。注（不确定）：3082 应该指 私钥</p>
+<p>#以下共 604 字节 (0x025c)</p>
+<p><code>020100</code> # 整型 长度 为 0 (0x00)，内容：version</p>
+<p><code>028181</code> # 整型 长度 为 129 字节 (0x81)，内容：模数 n (modulus)</p>
+<p><code>00e7b0dd45eba985ea1eb2fd7a7237e654ff0e40c9e5818d9348aa2df7fc04e7e2a429c3e9031eb2b217bb10fd1370ead89b33dd2233a54e035e37d39ba63db3d138926cdc9a01e8b6a8ef84949b9f1a3bd4fe0adeeb3b9d84fb7af98f20d089c75197a94884b8a03400d73c3fcaa0dc1fad1ac2cb0e304c73198521dcf1e50779</code></p>
+<p><code>0203</code> # 整型 长度 为 3 字节(0x03)，内容：e (公钥指数)</p>
+<p><code>010001</code></p>
+<p><code>028180</code> # 整型 长度 为 128 字节(0x80)，内容：d (私钥指数)</p>
+<p><code>0554c882a75d8b3b4be18a7b9acd367b9632d9c2cb89239cd3fb367b924cfa98f8760d8ffb0665ce3b458eaa841c010b62e6da9bc2dc76e314f3ebe694f8ae7e82bd7e8e3b7cbb17d4f14263d4c328bd5d16566004098953b851dbb87f802a38af73ccb9bfec9eaee7fac92b6daad96d7d49e90d68e5460a148aeb22334e6c41</code></p>
+<p><code>0241</code> # 整型 长度 为 65 字节(0x41)，内容：p (素数)</p>
+<p><code>00f40c8cc874c39b3d452e5be257835d24cff6b2627de2af1666a799e073e6fd5997d238f7a1641b0b5ac21bd5e0bbcbd0d932165f050fec3da3bcd2dbea24c505</code></p>
+<p><code>0241</code> # 整型 长度 为 65 字节(0x41)，内容：q (素数)</p>
+<p><code>00f30963dc1df32b6d292be1e3faf1620256909aa20b4d27efffd8cc9bcb5b55f5edf9b1eb99974d8ebb865500dbed5da95bd1de1b93e00c1def29778e8957c2e5</code></p>
+<p><code>0240</code> # 整型 长度 为 64 字节(0x40)，内容：d mod(p-1)</p>
+<p><code>62290a17369fd6b8f6328752aad0738e72f74f18be7986e303b735f549a9070e1a3abc1f1e131dad9b7ba7a68716020ca6cfb69fd1716e1bfcd7de18063d73e1</code></p>
+<p><code>0240</code> # 整型 长度 为 64 字节(0x40)，内容：d mod(q-1)</p>
+<p><code>3ce3565c58388ae1af55ea22f6c4b0bc4b39b133f5c6dfc1960497c6545d4e9ced81081d317ea194a7d090cd454c2392018a03ae3f0efb9a2847e847128ba52d</code></p>
+<p><code>0241</code> # 整型 长度 为 65 字节(0x41)，内容：(1/q)mod p &lt;即 (q**-1)mod p&gt;</p>
+<p><code>00eb5a32f31620e1bb980467829c2a7c9d3b2f8d7f4f42131ed7a289825f0aeaf390b542c755c0dcc94dfaee609fba2c50731b6a1d197b7b9a91267acdade62f96</code></p>
+<p>通过上面解析可以获取到证书中的RSA密钥。</p>
 
-  <p> — Oct 9, 2022</p>
+  <p> — Oct 11, 2022</p>
   
 
 

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>bytectf2022 wp</title>
+  
+  <link rel="canonical" href="http://example.com/2022/10/11/bytectf2022%20wp/">
+  
+  <meta name="description" content="9.26   Choose_U_Flagtask.py  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758import astimpo">
+  
+  
+  <meta name="author" content="John Doe">
+  
+  
+  
+  <meta property="og:site_name" content="Hexo" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="bytectf2022 wp" />
+  
+  <meta property="og:description" content="9.26   Choose_U_Flagtask.py  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758import astimpo">
+  
+  <meta property="og:url" content="http://example.com/2022/10/11/bytectf2022%20wp/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="bytectf2022 wp">
+  
+  <meta name="twitter:description" content="9.26   Choose_U_Flagtask.py  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758import astimpo">
+  
+  
+  
+  
+  <meta name="twitter:url" content="http://example.com/2022/10/11/bytectf2022%20wp/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/css/normalize.css">
+
+  
+<link rel="stylesheet" href="/css/skeleton.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+<link rel="stylesheet" href="/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/css/user.css">
+
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+</style>
+
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+  
+  <script src="/js/pic.min.js" defer></script>
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+
+        <div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h1 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
+  </div>
+
+  <div class="six columns ml-1">
+    <h1 class="mt-2">
+      Hi Folks.
+    </h1>
+  </div>
+
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="/">Home</a>
+        
+          
+          <a href="/Works" class="ml">Works</a>
+          
+        
+          
+          <a href="/About" class="ml">About</a>
+          
+        
+        
+          
+            <a href="mailto:test@test.test" target="_blank" class="ml">Email</a>
+          
+        
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+            <h2>bytectf2022 wp</h2>
+
+  <blockquote>
+<p>9.26 </p>
+</blockquote>
+<h2 id="Choose-U-Flag"><a href="#Choose-U-Flag" class="headerlink" title="Choose_U_Flag"></a>Choose_U_Flag</h2><p>task.py </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ast</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> signal</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> ZZ, Poly</span><br><span class="line"><span class="keyword">from</span> sympy.abc <span class="keyword">import</span> x</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> ntru <span class="keyword">import</span> NTRUCipher</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">exitHandler</span>(<span class="params">signum, frame</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"timeout"</span>)</span><br><span class="line">    exit()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">signal.signal(signal.SIGALRM, exitHandler)</span><br><span class="line">signal.alarm(<span class="number">30</span>)</span><br><span class="line"></span><br><span class="line">flag = os.environ.get(<span class="string">"CTF_CHALLENGE_FLAG"</span>)</span><br><span class="line"></span><br><span class="line">N = <span class="number">107</span></span><br><span class="line">p = <span class="number">3</span></span><br><span class="line">q = <span class="number">64</span></span><br><span class="line"></span><br><span class="line">cipher = NTRUCipher(N, p, q)</span><br><span class="line">cipher.generate()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f"[+]h_poly: <span class="subst">{cipher.h_poly.all_coeffs()}</span>"</span>)</span><br><span class="line"></span><br><span class="line">random_key = <span class="string">''</span>.join(random.sample(string.printable, <span class="number">12</span>))</span><br><span class="line">key_arr = np.unpackbits(np.frombuffer(random_key.encode(), dtype=np.uint8))</span><br><span class="line">key_enc = cipher.encrypt(Poly(key_arr, x).set_domain(ZZ))</span><br><span class="line">key_coeffs = key_enc.all_coeffs()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f"[+]key coeffs: <span class="subst">{key_coeffs}</span>"</span>)</span><br><span class="line"></span><br><span class="line">dec_data = <span class="built_in">input</span>(<span class="string">"decrypt data &gt; "</span>)</span><br><span class="line">dec_arr = ast.literal_eval(dec_data)</span><br><span class="line"><span class="keyword">if</span> dec_arr == key_coeffs:</span><br><span class="line">    exit(-<span class="number">1</span>)</span><br><span class="line">dec = cipher.decrypt(Poly(dec_arr, x).set_domain(ZZ))</span><br><span class="line">dec_coeffs = dec.all_coeffs()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f"[+]decrypt coeffs: <span class="subst">{dec_coeffs}</span>"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> N &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        u_key = <span class="built_in">input</span>(<span class="string">"u key &gt; "</span>)</span><br><span class="line">        <span class="keyword">if</span> u_key == random_key:</span><br><span class="line">            <span class="built_in">print</span>(flag)</span><br><span class="line">            exit(-<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"key err"</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"input err"</span>)</span><br><span class="line">    N = N - <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>不得不说大赛题的含金量，少有的源码在vscode里一句报错都没有的题目，大赞。 </p>
+</blockquote>
+<p>这道题刚上手的时候，立马想到了ntru，然后分析算法。 </p>
+<p>题目先给你一次机会，对任意输入的密文进行解密（不知道密钥的情况），并输出明文，然后给你N次机会（N=107），让你输入题目给的密文对应的明文，正确则给flag。 看到这立刻想到了选择密文攻击(Chosen cipher-text attack)。在搜论文的时候果然搜到了一篇： <a target="_blank" rel="noopener" href="https://www.iacr.org/archive/crypto2000/18800021/18800021.pdf。">https://www.iacr.org/archive/crypto2000/18800021/18800021.pdf。</a></p>
+<p>仔细研读了论文。其攻击适合可选择的明文比较少的情况，一般只需要两次或者不超过几十次（穷举量），穷举量与f和g的结构相关。定义k=f AND G，AND指相应多项式次数的系数进行与运算，当多项式k的非0次数项较少时，不超过3（在NTRU的n比较大时，具体可以根据不同NTRU格参数的信息进行本地测试），我们可以简单选择两个密文对私钥进行攻击。<strong>记多项式k的非0系数的个数为collision</strong>，几种标准的NTRU参数的<strong>collision概率</strong>如下，collision越小，私钥攻击的穷举量越少。</p>
+<p><img src="https://tl2cents.github.io/2021/12/14/Hitcon2021-Crypto-Writeup/image-20211214202841111.png" alt="image-20211214202841111"></p>
+<p><img src="https://tl2cents.github.io/2021/12/14/Hitcon2021-Crypto-Writeup/image-20211214202827798.png" alt="image-20211214202827798"></p>
+<p>该攻击的原理如下：</p>
+<p>cipher=c∗h+ccipher=c∗h+c，其中c是整数，h是公钥，并且c的选取要保证c | p，并且q/4&lt;c&lt;q/2c | p，并且q/4&lt;c&lt;q/2。具体推导可以参考paper，如果我们得的解密的信息为m，那么私钥可以通过下面等式恢复：f≡−qk∗m−1 mod pf≡−qk∗m−1 mod p。从这个式子我们就可以明白为什么collision需要比较小，因为它直接决定了密钥恢复的穷举量。</p>
+<p>所以我也跟着这个思路构造了攻击流程：</p>
+<ul>
+<li>计算cipher=c∗h+ccipher=c∗h+c </li>
+<li>发送cipher并得到m </li>
+<li>构造只有1个collision的k（出现概率高达1/10，可以一试），在N次机会中计算每一个k对应的f≡−qk∗m−1 mod pf≡−qk∗m−1 mod p。如此得到私钥并计算明文后发送，以期得到正确flag。 </li>
+</ul>
+<p>一个大佬的博客<a target="_blank" rel="noopener" href="https://tl2cents.github.io/2021/12/14/Hitcon2021-Crypto-Writeup/">Hitcon2021 Crypto Writeup | tl2cents blog</a>更让我对次攻击确信不疑，因为这个paper的另一个思路被用作hitconctf的考点。</p>
+<p>于是当时写下如下exp： </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> itertools </span><br><span class="line"><span class="keyword">import</span> ast</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> signal</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> gmpy2 </span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> sympy </span><br><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> invert </span><br><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> ZZ, Poly</span><br><span class="line"><span class="keyword">from</span> sympy.abc <span class="keyword">import</span> x</span><br><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> GF</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> * </span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> ntru <span class="keyword">import</span> NTRUCipher</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_2_power</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">return</span> n != <span class="number">0</span> <span class="keyword">and</span> (n &amp; (n - <span class="number">1</span>) == <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">invert_poly</span>(<span class="params"> f_poly, R_poly, p</span>):</span><br><span class="line">        <span class="keyword">if</span> gmpy2.is_prime(p):</span><br><span class="line">            inv_poly = invert(f_poly, R_poly, domain=GF(p))</span><br><span class="line">        <span class="keyword">elif</span> is_2_power(p):</span><br><span class="line">            inv_poly = invert(f_poly, R_poly, domain=GF(<span class="number">2</span>))</span><br><span class="line">            e = <span class="built_in">int</span>(gmpy2.log2(p))</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, e):</span><br><span class="line">                inv_poly = ((<span class="number">2</span> * inv_poly - f_poly * inv_poly ** <span class="number">2</span>) %</span><br><span class="line">                            R_poly).trunc(p)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> Exception(<span class="string">"Cannot invert polynomial in Z_{}"</span>.<span class="built_in">format</span>(p))</span><br><span class="line">        <span class="keyword">return</span> inv_poly</span><br><span class="line"></span><br><span class="line">N = <span class="number">107</span></span><br><span class="line">p = <span class="number">3</span></span><br><span class="line">q = <span class="number">64</span></span><br><span class="line">c = <span class="number">27</span></span><br><span class="line">R_poly = Poly(x ** N - <span class="number">1</span>, x).set_domain(ZZ)</span><br><span class="line"></span><br><span class="line">CHALLENGE_ID = <span class="string">'{{ecf7ab4d6205f8a6e70cabb4a911b6b3}}'</span></span><br><span class="line">os.system(<span class="string">'./wscat -p 1337 --endpoint wss://telnet.2022.capturetheflag.fun/ws/'</span> + CHALLENGE_ID + <span class="string">' &amp;1&gt;stdout &amp;2&gt;stderr &amp;'</span>)</span><br><span class="line">conn = remote(<span class="string">'127.0.0.1'</span>, <span class="number">1337</span>)</span><br><span class="line">rec = conn.recvuntil(<span class="string">b'decrypt data'</span>).decode().split(<span class="string">'\n'</span>) </span><br><span class="line"></span><br><span class="line"><span class="comment"># print(rec) [+]h_poly: [ …… \ndecrypt data'</span></span><br><span class="line"></span><br><span class="line">h_poly = ast.literal_eval(rec[<span class="number">0</span>][<span class="number">11</span>:-<span class="number">1</span>]+<span class="string">']'</span>)</span><br><span class="line">key_coeffs = ast.literal_eval(rec[<span class="number">1</span>][<span class="number">15</span>:-<span class="number">1</span>]+<span class="string">']'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># print('h=',h_poly) </span></span><br><span class="line"><span class="comment">#print('k=',key_coeffs) </span></span><br><span class="line"></span><br><span class="line">cipher = [<span class="number">0</span>]*N </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N): </span><br><span class="line">    cipher[i] = c*h_poly[i]+c </span><br><span class="line"></span><br><span class="line"><span class="comment"># print('cipher=',cipher) 'cipher= [324……, -234]'</span></span><br><span class="line">conn.sendline(<span class="built_in">str</span>(cipher).encode()) </span><br><span class="line">cipher = Poly(cipher,x) </span><br><span class="line">rec = conn.recvuntil(<span class="string">b'u key &gt;'</span>).decode().split(<span class="string">'\n'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># print(rec) 'b' &gt; [+]……-1]\nu key &gt;''</span></span><br><span class="line"></span><br><span class="line">decrypt_coeffs = ast.literal_eval(rec[<span class="number">0</span>][<span class="number">22</span>:-<span class="number">1</span>]+<span class="string">']'</span>)</span><br><span class="line">m = Poly(decrypt_coeffs,x)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'m='</span>,m)</span><br><span class="line"></span><br><span class="line"><span class="comment">#print('dec=',decrypt_coeffs) #dec= Poly(-x……domain='ZZ')</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#testpoly = sympy.polys.polytools.invert(decrypt_coeffs,x**N-1,domain=GF(p, symmetric=False))</span></span><br><span class="line"><span class="comment"># print('test=',testpoly) #test= Poly(x*……odulus=3)</span></span><br><span class="line"></span><br><span class="line">m_inv = sympy.polys.polytools.invert(m,R_poly,domain=GF(p, symmetric=<span class="literal">False</span>)) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">'inv='</span>,m_inv)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">    k=[<span class="number">0</span>]*N </span><br><span class="line">    k[i] = -<span class="number">1</span> </span><br><span class="line">    k_=Poly(k,x) </span><br><span class="line">    f_poly=-q*k_*m_inv </span><br><span class="line">    f_poly_arr = f_poly.all_coeffs() </span><br><span class="line">    g = [f_poly_arr[j]%p <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(N)]</span><br><span class="line">    f_poly = Poly(g,x) </span><br><span class="line">    f_p_poly = invert_poly(f_poly, R_poly,p)</span><br><span class="line">    a_poly = ((f_poly * cipher) % R_poly).trunc(q)</span><br><span class="line">    b_poly = a_poly.trunc(p)</span><br><span class="line">    out=((f_p_poly * b_poly) %R_poly).trunc(p) </span><br><span class="line">    out_arr = out.all_coeffs() </span><br><span class="line">    <span class="built_in">print</span>(out_arr)</span><br><span class="line">    r=<span class="string">""</span> </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> out_arr:</span><br><span class="line">        <span class="keyword">if</span> i == -<span class="number">1</span>:</span><br><span class="line">            r+=<span class="string">"1"</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        r+=<span class="built_in">str</span>(i) </span><br><span class="line">    <span class="keyword">if</span> r == <span class="string">""</span>:</span><br><span class="line">        <span class="keyword">continue</span> </span><br><span class="line">    r=long_to_bytes(<span class="built_in">int</span>(r,<span class="number">2</span>))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"r="</span>,r) </span><br><span class="line">    conn.sendline(r) </span><br><span class="line">    <span class="built_in">print</span>(conn.recvline()) </span><br><span class="line">    rec = conn.recvuntil(<span class="string">b'u key &gt;'</span>) </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'rec='</span>,rec) </span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">        k[j] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">conn.close()</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>跑的时候出问题：每个k居然输出相同的f…… </p>
+<p>比赛后翻wp，真的肠子都悔青了： 不知道是非预期还是怎么地，只要在给出的密文的最后一项加模数，然后进行解密，就能得到明文！！</p>
+<p>仔细想来也是对的，ntru进行的是多项式模运算，系数加减模数对解密无影响。正确的exp：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">CHALLENGE_ID = <span class="string">'b53943239400942422ddacb647058193'</span></span><br><span class="line">sh = remote(CHALLENGE_ID + <span class="string">'.2022.capturetheflag.fun'</span>, <span class="number">1337</span>, ssl=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">sh.recvuntil(<span class="string">"[+]key coeffs: "</span>)</span><br><span class="line">cipher = <span class="built_in">eval</span>(sh.recvline(<span class="literal">False</span>))</span><br><span class="line">cipher[-<span class="number">1</span>] += <span class="number">64</span></span><br><span class="line"></span><br><span class="line">sh.recvuntil(<span class="string">"&gt; "</span>)</span><br><span class="line">sh.sendline(<span class="built_in">str</span>(cipher))</span><br><span class="line"></span><br><span class="line">sh.recvuntil(<span class="string">"coeffs: "</span>)</span><br><span class="line">key = <span class="built_in">eval</span>(sh.recvline(<span class="literal">False</span>))</span><br><span class="line"></span><br><span class="line">tmp = <span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> key:</span><br><span class="line">    tmp += <span class="built_in">str</span>(i)</span><br><span class="line">res = long_to_bytes(<span class="built_in">int</span>(tmp, <span class="number">2</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"res="</span>,res)</span><br><span class="line">sh.recvuntil(<span class="string">"&gt; "</span>)</span><br><span class="line">sh.sendline(res)</span><br><span class="line">flag = sh.recvline(<span class="literal">False</span>)</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br><span class="line"></span><br><span class="line"><span class="comment"># sh.interactive()</span></span><br><span class="line">sh.close()</span><br><span class="line"><span class="comment"># output: b'ByteCTF{9e8876cc-9eae-4178-b2b4-9a4c7ae0941f}'</span></span><br></pre></td></tr></table></figure>
+
+  <p> — Oct 11, 2022</p>
+  
+
+
+        </div>
+        <div class="row mt-2">
+  <h3>Search</h3>
+  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
+  <div style="margin-top: 1.5rem;">
+    <ul id="result"></ul>
+  </div>
+</div>
+        <div class="row mt-2">
+  
+    <div class="eight columns">
+      <p id="madewith">Made with ❤ and
+        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
+        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
+        </a>
+        
+        at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.</p>
+        
+    </div>
+
+    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
+    <div class="four columns mb-3 posisi" >
+      
+      <a class="ml-0 footer-link icon" href="https://github.com/adisaktijrs" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="GitHub">
+        <svg class="github svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      
+
+      
+      <a class="ml-0 footer-link icon" href="https://linkedin.com/in/adisaktijrs" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="LinkedIn">
+        <svg class="linkedin svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      
+
+      
+      <a class="ml-0 footer-link icon" href="https://twitter.com/adisaktijrs" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="Twitter">
+        <svg class="twitter svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+      </a>
+      
+
+      
+      <a class="ml-0 footer-link icon" href="https://instagram.com/adisaktijrs" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="Instagram">
+        <svg class="instagram svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+      </a>
+      
+
+      
+      <a class="ml-0 footer-link icon" href="https://stackoverflow.com/story/tobiasreithmeier" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="StackOverflow">
+        <svg class="stackoverflow svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Stack Overflow</title><path d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.092-10.473-2.203zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154Z"/></svg>
+      </a>
+      
+
+    </div>
+  
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+</body>
+
+</html>
