@@ -15,7 +15,7 @@
   
   <link rel="canonical" href="http://example.com/2022/10/11/RSA%E7%A7%81%E9%92%A5%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/">
   
-  <meta name="description" content="python 生成私钥1from Crypto.PublicKey import RSA 读取公钥信息    1 2 3 4 5 6 rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e pr">
+  <meta name="description" content="python 生成私钥1from Crypto.PublicKey import RSA  读取公钥信息   1 2 3 4 5 6  rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e p">
   
   
   <meta name="author" content="John Doe">
@@ -26,14 +26,14 @@
   <meta property="og:type" content="article" />
   <meta property="og:title" content="RSA私钥格式解析" />
   
-  <meta property="og:description" content="python 生成私钥1from Crypto.PublicKey import RSA 读取公钥信息    1 2 3 4 5 6 rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e pr">
+  <meta property="og:description" content="python 生成私钥1from Crypto.PublicKey import RSA  读取公钥信息   1 2 3 4 5 6  rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e p">
   
   <meta property="og:url" content="http://example.com/2022/10/11/RSA%E7%A7%81%E9%92%A5%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/" />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RSA私钥格式解析">
   
-  <meta name="twitter:description" content="python 生成私钥1from Crypto.PublicKey import RSA 读取公钥信息    1 2 3 4 5 6 rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e pr">
+  <meta name="twitter:description" content="python 生成私钥1from Crypto.PublicKey import RSA  读取公钥信息   1 2 3 4 5 6  rsakey = RSA.importKey(open(&#34;public.key&#34;, &#34;r&#34;).read()) n = rsakey.n e = rsakey.e p">
   
   
   
@@ -310,53 +310,46 @@ mjx-container[display="true"] + br {
             <h2>RSA私钥格式解析</h2>
 
   <h2 id="python-生成私钥"><a href="#python-生成私钥" class="headerlink" title="python 生成私钥"></a>python 生成私钥</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br></pre></td></tr></table></figure>
-<h2 id="读取公钥信息"><a href="#读取公钥信息" class="headerlink" title="读取公钥信息"></a>读取公钥信息</h2><div class="table-container">
-<table>
+
+<h2 id="读取公钥信息"><a href="#读取公钥信息" class="headerlink" title="读取公钥信息"></a>读取公钥信息</h2><table>
 <thead>
 <tr>
-<th><code>1 2 3 4 5 6</code></th>
+<th><code>1 2 3 4 5 6 </code></th>
 <th><code>rsakey = RSA.importKey(open("public.key", "r").read()) n = rsakey.n e = rsakey.e print("n=%\ne=%d",n,e)</code></th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
+<td></td>
 <td></td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h2 id="生成秘钥对文件"><a href="#生成秘钥对文件" class="headerlink" title="生成秘钥对文件"></a>生成秘钥对文件</h2><h2 id="对文件加解密"><a href="#对文件加解密" class="headerlink" title="对文件加解密"></a>对文件加解密</h2><p>载入编码方式</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from Crypto.Cipher import PKCS1_OAEP</span><br></pre></td></tr></table></figure>
-<div class="table-container">
+
 <table>
 <thead>
 <tr>
-<th><code>1 2 3 4 5 6 7</code></th>
-<th><code>rsakey=RSA.importKey(open("public_key.key","r").read()) rsa = PKCS1_OAEP.new(rsakey) encrypt = rsa.encrypt(flag.encode()) rsakey=RSA.importKey(open("private_key.key","r").read()) rsa = PKCS1_OAEP.new(rsakey) decrypt = rsa.decrypt(f.read())</code></th>
+<th><code>1 2 3 4 5 6 7 </code></th>
+<th><code>rsakey=RSA.importKey(open("public_key.key","r").read()) rsa = PKCS1_OAEP.new(rsakey) encrypt = rsa.encrypt(flag.encode()) rsakey=RSA.importKey(open("private_key.key","r").read()) rsa = PKCS1_OAEP.new(rsakey) decrypt = rsa.decrypt(f.read()) </code></th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
+<td></td>
 <td></td>
 </tr>
-</tbody>
-</table>
-</div>
-<h2 id="算得-n-e-d-q-p-生成-private-key-key"><a href="#算得-n-e-d-q-p-生成-private-key-key" class="headerlink" title="算得 n e d q p 生成 private_key.key"></a>算得 n e d q p 生成 private_key.key</h2><div class="table-container">
-<table>
+</tbody></table>
+<h2 id="算得-n-e-d-q-p-生成-private-key-key"><a href="#算得-n-e-d-q-p-生成-private-key-key" class="headerlink" title="算得 n e d q p 生成 private_key.key"></a>算得 n e d q p 生成 private_key.key</h2><table>
 <thead>
 <tr>
-<th><code>1 2 3 4 5 6 7</code></th>
+<th><code>1 2 3 4 5 6 7 </code></th>
 <th><code>rsa_components = (n, e, int(d), p, q) rsa = RSA.construct(rsa_components) public_key = rsa.exportKey() # 此rsa与上文随机生成的rsa相同 f = open("public_key.key", "w") f.write(public_key.decode()) f.close()</code></th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
+<td></td>
 <td></td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>在开始之前，让我们先了解一些关键概念。</p>
 <p>X.509 是定义公钥证书格式的标准。 因此，这种格式描述了其他信息中的公钥。</p>
 <p>DER是最流行的编码格式，用于在文件中存储 X.509 证书、PKCS8 私钥等数据。这是一种二进制编码，无法使用文本编辑器查看生成的内容。</p>
@@ -364,12 +357,12 @@ mjx-container[display="true"] + br {
 <p>该标准不仅可以处理 RSA 私钥，还可以处理其他算法。PKCS8 私钥通常通过 PEM 编码格式进行交换。</p>
 <p>PEM是 DER 证书的 base-64 编码机制。PEM 还可以对其他类型的数据进行编码，例如公钥/私钥和证书请求。</p>
 <p>PEM 文件还包含描述编码数据类型的页眉和页脚，举例如下：</p>
-<p>`——-BEGIN RSA PRIVATE KEY——-</p>
+<p>`—–BEGIN RSA PRIVATE KEY—–</p>
 <p>…Base64 encoding of the DER encoded certificate…</p>
-<p>——-END RSA PRIVATE KEY——-`</p>
+<p>—–END RSA PRIVATE KEY—–`</p>
 <p>3：解析PEM证书</p>
 <p>1：示例证书：</p>
-<p>`——-BEGIN RSA PRIVATE KEY——-</p>
+<p>`—–BEGIN RSA PRIVATE KEY—–</p>
 <p>MIICXAIBAAKBgQDnsN1F66mF6h6y/XpyN+ZU/w5AyeWBjZNIqi33/ATn4qQpw+kD</p>
 <p>HrKyF7sQ/RNw6tibM90iM6VOA14305umPbPROJJs3JoB6Lao74SUm58aO9T+Ct7r</p>
 <p>O52E+3r5jyDQicdRl6lIhLigNADXPD/KoNwfrRrCyw4wTHMZhSHc8eUHeQIDAQAB</p>
@@ -383,7 +376,7 @@ mjx-container[display="true"] + br {
 <p>XFg4iuGvVeoi9sSwvEs5sTP1xt/BlgSXxlRdTpztgQgdMX6hlKfQkM1FTCOSAYoD</p>
 <p>rj8O+5ooR+hHEoulLQJBAOtaMvMWIOG7mARngpwqfJ07L41/T0ITHteiiYJfCurz</p>
 <p>kLVCx1XA3MlN+u5gn7osUHMbah0Ze3uakSZ6za3mL5Y=</p>
-<p>——-END RSA PRIVATE KEY——-`</p>
+<p>—–END RSA PRIVATE KEY—–`</p>
 <p>解析：</p>
 <p>1）删除页眉、页脚和新行。</p>
 <p>2）将 Base64 编码的字符串解码为其对应的二进制格式。</p>
