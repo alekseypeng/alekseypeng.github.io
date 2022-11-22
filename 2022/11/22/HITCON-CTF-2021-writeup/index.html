@@ -11,38 +11,34 @@
   <meta charset="utf-8">
 
   
-  <title>Hexo</title>
+  <title>HITCON_CTF_2021_writeup</title>
   
-  <link rel="canonical" href="http://example.com/page/2/">
+  <link rel="canonical" href="http://example.com/2022/11/22/HITCON-CTF-2021-writeup/">
   
-  <meta name="description" content="">
+  <meta name="description" content="a_little_easy_rsa12345678910111213141516from Crypto.Util.number import *N = 1024P = 211p = getPrime(P)q = getPrime(N-P)n = p*qprint(n.bit_length())d =">
   
   
   <meta name="author" content="John Doe">
   
   
-  <meta property="og:image" content="http://example.com/images/thumbnail.jpg">
-  
   
   <meta property="og:site_name" content="Hexo" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Hexo" />
+  <meta property="og:title" content="HITCON_CTF_2021_writeup" />
   
-  <meta property="og:description" content="">
+  <meta property="og:description" content="a_little_easy_rsa12345678910111213141516from Crypto.Util.number import *N = 1024P = 211p = getPrime(P)q = getPrime(N-P)n = p*qprint(n.bit_length())d =">
   
-  <meta property="og:url" content="http://example.com/page/2/" />
+  <meta property="og:url" content="http://example.com/2022/11/22/HITCON-CTF-2021-writeup/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Hexo">
+  <meta name="twitter:title" content="HITCON_CTF_2021_writeup">
   
-  <meta name="twitter:description" content="">
-  
-  
-  
-  <meta name="twitter:image" content="http://example.com/images/thumbnail.jpg">
+  <meta name="twitter:description" content="a_little_easy_rsa12345678910111213141516from Crypto.Util.number import *N = 1024P = 211p = getPrime(P)q = getPrime(N-P)n = p*qprint(n.bit_length())d =">
   
   
-  <meta name="twitter:url" content="http://example.com/page/2/" />
+  
+  
+  <meta name="twitter:url" content="http://example.com/2022/11/22/HITCON-CTF-2021-writeup/" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -313,76 +309,34 @@ mjx-container[display="true"] + br {
 </div>
 
         <div class="trans">
-          <div class="row">
-  <div class="column">
-    <!-- Main information, edit it on theme/_config.yml -->
-    <h2 class="mb-2">Aleksei&#39;s Blog</h2>
-    <p>A ctf-er and crypto learner from China 🇮🇩</p>
-    <p>本博客主要记录比赛writeup，学习笔记，读书笔记等。自信人生二百年，会当击水三千里。</p>
-  </div>
-</div>
+            <h2>HITCON_CTF_2021_writeup</h2>
 
-<h3>Recent Posts</h3>
+  <h2 id="a-little-easy-rsa"><a href="#a-little-easy-rsa" class="headerlink" title="a_little_easy_rsa"></a>a_little_easy_rsa</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">N = <span class="number">1024</span></span><br><span class="line">P = <span class="number">211</span></span><br><span class="line">p = getPrime(P)</span><br><span class="line">q = getPrime(N-P)</span><br><span class="line">n = p*q</span><br><span class="line"><span class="built_in">print</span>(n.bit_length())</span><br><span class="line">d = p</span><br><span class="line">e = inverse(d, (p-<span class="number">1</span>)*(q-<span class="number">1</span>))</span><br><span class="line">flag = bytes_to_long(<span class="built_in">open</span>(<span class="string">'flag'</span>,<span class="string">'rb'</span>).read())</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(n)</span><br><span class="line"><span class="built_in">print</span>(e)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">pow</span>(flag, e, n))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>en=e<em>p</em>q=q\pmod {\phi (n)}\<br>2=2^{en}=2^q\pmod q\<br>2^{en}-2=kq\<br>gcd(2^{en}-2,n)=q<br>$$</p>
+<p>exp:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto_box <span class="keyword">import</span> *  </span><br><span class="line">n=</span><br><span class="line">e=</span><br><span class="line">c= </span><br><span class="line">n_ = gp.powmod(<span class="number">2</span>,e*n,n) -<span class="number">2</span>  </span><br><span class="line">q = gp.gcd(n_,n) </span><br><span class="line"><span class="keyword">assert</span> n//q*q == n </span><br><span class="line">p = n//q </span><br><span class="line">m = RSA(p,q,e,c) </span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-<div class="row">
 
-  <div class="three columns left lit">
-    <p class="bottom">Nov 22, 2022</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2022/11/22/HITCON-CTF-2021-writeup/" >
-      
-        HITCON_CTF_2021_writeup
-      
-    </a>
-  </div>
-</div>
+<h2 id="magic-rsa"><a href="#magic-rsa" class="headerlink" title="magic_rsa"></a>magic_rsa</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> binascii <span class="keyword">import</span> unhexlify</span><br><span class="line"></span><br><span class="line">LEN = <span class="number">17</span></span><br><span class="line">magic = os.urandom(LEN)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Magic:"</span>, magic.<span class="built_in">hex</span>())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'Coud you use it to do encryption as hash?'</span>)</span><br><span class="line"></span><br><span class="line">magic_num = bytes_to_long(magic)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    N = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">'N:&gt;'</span>))</span><br><span class="line">    e = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">'E:&gt;'</span>))</span><br><span class="line">    data = unhexlify(<span class="built_in">input</span>(<span class="string">'data:&gt;'</span>))</span><br><span class="line">    <span class="keyword">if</span> N &gt;&gt; (<span class="number">384</span> - LEN*<span class="number">8</span>) == magic_num:</span><br><span class="line">        data2 = sha384(data).digest()</span><br><span class="line">        num1 = bytes_to_long(data)</span><br><span class="line">        num2 = bytes_to_long(data2)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">pow</span>(num1, e, N) == num2:</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">open</span>(<span class="string">'flag'</span>,<span class="string">'r'</span>).read())</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'try harder!!!'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'try harder!'</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'invalid'</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<div class="row">
+<p>描述：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ramdom: magic(17 bits) </span><br><span class="line">input: N,E,data</span><br><span class="line">assert:</span><br><span class="line">N&gt;&gt;248 == magic </span><br><span class="line">data^e = sha384(data) (mod N)</span><br></pre></td></tr></table></figure>
 
-  <div class="three columns left lit">
-    <p class="bottom">Nov 22, 2022</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2022/11/22/N1CTF-writeup/" >
-      
-        N1CTF-writeup
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Nov 20, 2022</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2022/11/20/functions-note/" >
-      
-        functions_note
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Nov 4, 2022</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2022/11/04/DLP-ECDLP-0x1/" >
-      
-        DLP_&_ECDLP_0x1
-      
-    </a>
-  </div>
-</div>
+<p>这道题的实质是一道离散对数问题。由于sha384(data)不可逆，题目实际上是在data与sha(data)给定的情况下求e。那么data就可以看成生成元。</p>
+<p>想要快速求得生成元，模数N需满足N-1光滑，这道题N的高位给定，穷举地位即可。穷举时不用全部穷举，只需要遍历最高位的2个字节，这样分解N-1更快。</p>
+<p>exp:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha384 </span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> * </span><br><span class="line">LEN = <span class="number">17</span></span><br><span class="line">magic_num = </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">65536</span>):</span><br><span class="line">    n = magic_num * <span class="number">2</span> ** (<span class="number">384</span> - LEN*<span class="number">8</span>) + i * <span class="number">2</span> ** (<span class="number">384</span> - LEN*<span class="number">8</span> - <span class="number">16</span>)</span><br><span class="line">    <span class="keyword">if</span> is_prime(n + <span class="number">1</span>):</span><br><span class="line">        f = factor(n)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">all</span>(p &lt; <span class="number">2</span> ** <span class="number">40</span> <span class="keyword">for</span> p, e <span class="keyword">in</span> f):</span><br><span class="line">            <span class="built_in">print</span>(f)</span><br><span class="line">            num1 = primitive_root(n+<span class="number">1</span>)</span><br><span class="line">            data = long_to_bytes(<span class="built_in">int</span>(num1))</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'data:'</span>,data.<span class="built_in">hex</span>())</span><br><span class="line">            data2 = sha384(data).digest()</span><br><span class="line">            num2 = bytes_to_long(data2) </span><br><span class="line">            e = discrete_log(Zmod(n+<span class="number">1</span>)(num2), Zmod(n+<span class="number">1</span>)(num1))</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">int</span>(<span class="built_in">pow</span>(num1, e, n+<span class="number">1</span>)) == num2:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'solved'</span>)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'num1='</span>,num1) </span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'num2='</span>,num2)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'e='</span>,e) </span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'n='</span>,n+<span class="number">1</span>) </span><br></pre></td></tr></table></figure>
 
 
-<h4> <a href="/archives">All Posts</a></h4>
+
+
+
+
+  <p> — Nov 22, 2022</p>
+  
+
 
         </div>
         <div class="row mt-2">
